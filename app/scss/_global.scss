@@ -1,0 +1,50 @@
+html,
+body {
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    object-fit: cover;
+    display: block;
+}
+
+body {
+    font-size: 18px;
+    @extend %Rubik-Regular;
+    color: $default;
+    display: flex;
+    flex-direction: column;
+}
+// input,
+// textarea{
+    
+// }
+// *::placeholder {
+    
+// }
+
+.container {
+    max-width: 1800px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.main {
+    flex-grow: 1;
+}
+
