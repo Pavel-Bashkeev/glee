@@ -18,6 +18,7 @@ const del = require('del');
 function styles() {
        return src([
               'node_modules/reset-css/reset.css',
+              'node_modules/slick-carousel/slick/slick.css',
               'app/'+ preprocessor +'/main.'+ preprocessor +'',
        ])
               .pipe(eval(preprocessor)())
