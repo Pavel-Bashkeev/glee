@@ -39,3 +39,11 @@ $mystic: #edf1f4;
 $portGore: #1f2044;
 $boulder: #7b7b7b;
 $scorpion: #585858;
+
+// Исправление ошибки fancybox
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}

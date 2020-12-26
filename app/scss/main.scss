@@ -1,6 +1,7 @@
+@import './vars';
 @import './libs';
 @import './fonts';
-@import './vars';
+
 
 
 @import './global';
@@ -12,6 +13,10 @@
 @import './page/index/services';
 @import './page/index/productsWeek';
 @import './page/index/productsWeekAccent';
+@import './page/index/productsNew';
+@import './page/index/video';
+@import './page/index/articles';
+@import './page/index/partners';
 // end index page
 
 // start about page
