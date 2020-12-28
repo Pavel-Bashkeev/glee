@@ -79,7 +79,7 @@ textarea{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 34px 0;
+    padding: 30px 0;
     background-color: #edf1f4;
     &__title{
         @extend %Rubik-Regular;
@@ -103,6 +103,36 @@ textarea{
             position: absolute;
             right: -6px;
             top:2px;
+        }
+    }
+}
+.pagination{
+    &__list{
+        display: flex;
+        align-items: center;
+    }
+    &__item{
+        &:not(:last-child){
+            margin-right: 16px;
+        }
+    }
+    &__link{
+        @extend %Rubik-Regular;
+        font-size: 16px;
+        padding: 16px 20px;
+        line-height: 16px;
+        color: $default;
+        display: block;
+        background-color: #fff;
+        border: 1px solid #a3bbc8;
+        &:hover{
+            color: #fff;
+            background-color: $default;
+        }
+        &--active{
+            color: #fff;
+            background-color: $default;
+
         }
     }
 }
