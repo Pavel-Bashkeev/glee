@@ -1,0 +1,85 @@
+.services-counter {
+    background-color: $accent;
+    padding: 77px 0 67px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__item {
+        text-align: center;
+        position: relative;
+
+        &::before {
+            content: '';
+            margin: 0 auto;
+            display: block;
+            width: 67px;
+            height: 64px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 1;
+            position: relative;
+        }
+
+        &:nth-child(1)::before {
+            background-image: url('../images/dest/icons/display.svg');
+        }
+
+        &:nth-child(2)::before {
+            background-image: url('../images/dest/icons/car.svg');
+        }
+
+        &:nth-child(3)::before {
+            background-image: url('../images/dest/icons/clock.svg');
+        }
+
+        &:nth-child(4)::before {
+            background-image: url('../images/dest/icons/emblem.svg');
+
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 27px;
+            background-color: #a3bbc8;
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+            z-index: 0;
+        }
+
+        &:nth-child(1)::after {
+            right: 53px;
+        }
+
+        &:nth-child(2)::after {
+            right: 44px;
+        }
+        &:nth-child(3)::after {
+            right: 35px;
+            }
+        &:nth-child(4)::after {
+        right: 30px;
+        }
+    }
+
+    &__number {
+        @extend %DMSans-Bold;
+        color: $default;
+        font-size: 36px;
+        line-height: 36px;
+        margin: 17px 0;
+        display: block;
+    }
+
+    &__text {
+        @extend %DMSans-Bold;
+        color: $default;
+        line-height: 32px;
+    }
+}

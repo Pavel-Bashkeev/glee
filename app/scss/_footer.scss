@@ -94,6 +94,13 @@
     &__item{
         padding-right: 14px;
         margin-right: 16px;
-        border-right:1px solid $boulder;
+        &:not(:last-child){
+            border-right:1px solid $boulder;
+        }
     }
+}
+
+// filter
+.hide{
+    display: none;
 }
