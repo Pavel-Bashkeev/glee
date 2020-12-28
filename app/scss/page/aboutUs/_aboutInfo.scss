@@ -1,0 +1,97 @@
+.about {
+    padding: 120px 0;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__image {
+        margin-right: 48px;
+    }
+}
+
+.about__info {
+    padding-top: 57px;
+    &-subTitle {
+        max-width: 300px;
+        margin-bottom: 28px;
+        display: flex;
+        align-items: flex-end;
+
+        &--number {
+            @extend %Rubik-Medium;
+            font-size: 140px;
+            color: #a3bbc8;
+            display: block;
+            margin-right: 30px;
+        }
+
+        &--text {
+            @extend %Rubik-Regular;
+            font-size: 16px;
+            line-height: 30px;
+            color: $default;
+            margin-bottom: 13px;
+        }
+    }
+    &-title{
+        color: $default;
+        text-align: left;
+        margin-bottom: 36px;
+    }
+    &-text{
+        color: $default;
+        @extend %Rubik-Regular;
+        font-size: 16px;
+        line-height: 30px;
+        padding-bottom: 57px;
+        margin-bottom: 36px;
+        border-bottom: 3px solid rgba(#09316f, 0.1);
+
+    }
+}
+.about-counter{
+    display: flex;
+    align-items: center;
+    &__item{
+        max-width: 200px;
+        padding:0 25px 0 60px;
+        color: #4c4c4c;
+        @extend %DMSans-Bold;
+        font-size: 16px;
+        line-height: 17px;
+        position: relative;
+        &:not(:last-child){
+            margin-right: 30px;
+            border-right: 1px solid #e6eaf0;
+        }
+        &-number{
+            @extend %DMSans-Bold;
+            font-size: 36px;
+            line-height: 38px;
+            color: $default;
+            display: block;
+            margin-bottom: 8px;
+        }
+        &::before{
+            content:'';
+            position: absolute;
+            top:13px;
+            left:0;
+            width: 44px;
+            height: 40px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        &:nth-child(1)::before{
+            background-image: url('../images/dest/icons/list.svg');
+        }
+        &:nth-child(2)::before{
+            background-image: url('../images/dest/icons/speaker.svg');
+        }
+        &:nth-child(3)::before{
+            background-image: url('../images/dest/icons/medal.svg');
+        }
+    }
+}

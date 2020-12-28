@@ -1,0 +1,104 @@
+.productsWeek-accent {
+    padding: 82px 0 80px;
+    background-color: $provPink;
+    position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+            width: 30px;
+            background-color: #fff;
+        }
+
+    &__wrapper {
+        display: flex;
+        align-items: stretch;
+    }
+
+    &__item {
+        max-width: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        color: $default;
+    }
+
+    &__info {
+        max-width: 460px;
+        padding-right: 95px;
+
+        &--left {
+            margin-right: 38px;
+        }
+
+        &--right {
+            max-width: 440px;
+        }
+
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+        left: 152px;
+        width: auto;
+        bottom: 4px;
+
+        &--left {
+            
+            left: 137px;
+        }
+
+        &--right {
+            left: 163px;
+        }
+    }
+
+    &__title {
+        @extend %DMSans-Bold;
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 16px;
+
+        &--right {
+            margin-bottom: 13px;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 26px;
+    }
+
+    &__link {
+        @extend %Rubik-Medium;
+        font-size: 15px;
+        border: 1px solid #b3b7b5;
+        border-radius: 5px;
+        color: $blueBayoux;
+        padding: 23px 87px 25px 20px;
+        position: relative;
+        display: block;
+        width: fit-content;
+
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 19px;
+            top: 40%;
+            width: 22px;
+            height: 9px;
+            background-image: url('../images/dest/icons/arrow-right--blue.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto;
+        }
+    }
+}

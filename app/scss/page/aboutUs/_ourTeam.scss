@@ -1,0 +1,107 @@
+.ourTeam{
+    padding-top: 120px;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.ourTeam-info{
+    max-width: 310px;
+    margin-right: 30px;
+    &__title{
+        margin-bottom: 26px;
+        text-align: left;
+        color: $default;
+    }
+    &__text{
+        @extend %Rubik-Regular;
+        line-height: 30px;
+        font-size: 16px;
+        color: $default;
+        margin-bottom: 36px;
+    }
+    &__link{
+        @extend %Poppins-Bold;
+        font-size: 15px;
+        padding: 20px 56px 19px 17px;
+        border-radius: 5px;
+        display: block;
+        width: fit-content;
+        color: #fff;
+        background-color: #a3bbc8;
+        position: relative;
+        &::after{
+            content: '';
+            width: 15px;
+            height: 11px;
+            position: absolute;
+            top: 21px;
+            right: 28px;
+            background-image: url('../images/dest/icons/arrow-right-white.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+        }
+    }
+}
+.ourTeam-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 100px 30px;
+    max-width: 770px;
+    width: 100%;
+    justify-content: center;
+}
+.ourTeam-item{
+    position: relative;
+    &__box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 325px;
+        width: 100%;
+        background-color: #fff;
+        padding: 30px 21px 28px 26px;
+        box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+        position: absolute;
+        bottom: -62px;
+        left: -1px;
+    }
+    &__name{
+        @extend %DMSans-Bold;
+        font-size: 22px;
+        list-style: 26px;
+        color: $default;
+        margin-bottom: 16px;
+    }
+    &__position{
+        @extend %Rubik-Regular;
+        font-size: 16px;
+        line-height: 18px;
+        color:#565872;
+    }
+    &__social{
+        display: flex;
+        align-items: center;
+    }
+    &__social-item{
+        background-color: #f6f6f6;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        border-radius: 50%;
+        &:not(:last-child){
+            margin-right: 10px;
+        }
+        svg{
+            display: block;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
+
+  

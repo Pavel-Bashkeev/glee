@@ -1,6 +1,7 @@
+@import './vars';
 @import './libs';
 @import './fonts';
-@import './vars';
+
 
 
 @import './global';
@@ -8,11 +9,25 @@
 @import './header';
 
 // start index page
-@import './page//index/topSlider';
+@import './page//index/hero';
+@import './page/index/services';
+@import './page/index/productsWeek';
+@import './page/index/productsWeekAccent';
+@import './page/index/productsNew';
+@import './page/index/video';
+@import './page/index/articles';
+@import './page/index/partners';
 // end index page
 
 // start about page
-@import './page/about/about';
+@import './page/aboutUs/aboutInfo';
+@import './page/aboutUs/servicesCounter';
+@import './page/aboutUs/ourTeam';
 // end about page
+
+// start blogs page
+@import './page/blogs/blogs';
+@import './page/blogs/asideFilters';
+// end blogs page
 
 @import './footer';

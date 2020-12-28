@@ -1,0 +1,30 @@
+.productsNew{
+    &__title{
+        margin-bottom: 23px;
+    }
+}
+.productsNew__items{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 34px 30px;
+    margin-bottom: 116px;
+}
+.productsNew__item{
+    padding: 43px 38px 125px;
+    background-color: $lightGray;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 0 0;
+    &-title{
+        @extend %DMSans-Bold;
+        font-size: 20px;
+        color: $title;
+        margin-bottom: 21px;
+        max-width: 180px;
+    }
+    &-type{
+        @extend %DMSans-Bold;
+        font-size: 16px;
+        color: $btnBgC;
+    }
+}

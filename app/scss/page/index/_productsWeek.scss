@@ -1,0 +1,114 @@
+.productsWeek {
+    margin-bottom: 104px;
+    &__container {
+        padding-top: 70px;
+        padding-bottom: 50px;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        grid-gap: 40px 30px;
+        margin-bottom: 131px;
+    }
+}
+
+.productsWeek__filters {
+    text-align: center;
+    margin-bottom: 78px;
+
+    &-btn {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        @extend %DMSans-Bold;
+        font-size: 16px;
+        color: $gray;
+        cursor: pointer;
+
+        &:hover {
+            color: $title;
+        }
+
+        &:not(:last-child) {
+            margin-right: 26px;
+        }
+    }
+}
+.filters-btn--active{
+    color: $title;
+}
+.productsWeek__item {
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fdfdfd;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    padding: 27px 0 38px;
+    height: 380px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+    &:hover{
+        .productsWeek__item-boxLink{
+            opacity: 1;
+        }
+    }
+
+    &-top {
+        position: relative;
+        overflow: hidden;
+        width: fit-content;
+        margin: 0 auto;
+        
+    }
+
+    &-info {
+        margin-top: auto;
+    }
+
+    &-boxLink {
+        position: absolute;
+        bottom: 20px;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        opacity: 0;
+        transition: opacity .5s;
+        
+    }
+
+    &-link {
+        width: 45px;
+        height: 45px;
+        background-color: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+       
+
+        &:hover {
+            background-color: $btnBgC;
+
+            .productsWeek__item-linkImg {
+                fill: rgb(255, 255, 255);
+            }
+        }
+
+    }
+
+    &-linkImg {
+        fill: $btnBgC;
+    }
+    &-img{
+        max-width: 230px;
+    }
+}

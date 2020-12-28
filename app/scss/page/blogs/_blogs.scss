@@ -1,0 +1,104 @@
+.blog {
+    padding: 120px 0;
+
+    &__container {
+        display: flex;
+
+    }
+
+    &-items {
+        margin-right: 70px;
+        margin-bottom: 30px;
+    }
+}
+
+.blog-item {
+    margin-bottom: 51px;
+    &__box {
+        position: relative;
+        margin-bottom: 39px;
+    }
+
+    &__image {
+        display: block;
+    }
+
+    &__description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #a3bbc8;
+        padding: 29px 22px;
+        color: #fff;
+        font-size: 12px;
+        text-transform: uppercase;
+
+        &-date {
+            margin-right: 20px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        &-user {
+            padding-left: 20px;
+            position: relative;
+        }
+
+        &-date::before,
+        &-user::before {
+            content: '';
+            width: 12px;
+            height: 13px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &-date::before {
+            background-image: url('../images/dest/icons/calendar.svg');
+        }
+
+        &-user::before {
+            background-image: url('../images/dest/icons/user-white.svg');
+        }
+    }
+
+    &__title {
+        @extend %Rubik-Regular;
+        color: #333333;
+        text-align: left;
+        margin-bottom: 22px;
+    }
+    &__text{
+        @extend %Rubik-Regular;
+        color: $default;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 28px;
+    }
+    &__link{
+        @extend %DMSans-Bold;
+        font-size: 15px;
+        line-height: 15px;
+        color: #a3bbc8;
+        border: 1px solid #a3bbc8;
+        padding: 23px 20px 26px;
+        max-width: 180px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &::after{
+            content:'';
+            width: 22px;
+            height: 9px;
+            background-image: url('../images/dest/icons/arrow-right--lightBlue.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}
